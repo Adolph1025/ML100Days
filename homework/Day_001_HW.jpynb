@@ -1,0 +1,57 @@
+一.
+1.
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+w = 3
+x_lin = np.linspace(0, 100, 101)
+y = (x_lin + np.random.randn(101) * 5) * w + b
+plt.plot(x_lin, y, 'b.', label = 'data points')
+plt.title("Assume we have data points")
+plt.legend(loc = 2)
+plt.show()
+
+y_hat = x_lin * w + b
+plt.plot(x_lin, y, 'b.', label = 'data')
+# 上面的 'b.' 是藍色點狀, 下面的 'r-' 是紅色線狀, label 是圖示上的名稱
+plt.plot(x_lin, y_hat, 'r-', label = 'prediction')
+plt.title("Assume we have data points (And the prediction)")
+plt.legend(loc = 2)
+plt.show()
+
+
+def mean_square_error(y, yp):
+   
+    mse = MSE = sum((y - yp)**2) / len(y)
+    return mse
+MSE = mean_square_error(y, y_hat)
+print("The Mean squar error is %.3f" % 
+
+
+二.競賽:數字識別器
+1.
+越來越多政府及企業想往無人化的方向邁進，而若機器能像人類一樣擁有自我辨識圖像的功能，將是往此方向的一大步(例如:測速照相機)。
+
+2.
+資料是由MNIST（“國家標準技術研究院”）發布的，有兩個數據集，分別是:訓練數據集、測試數據集。訓練數據集（train.csv）有785列，第一列稱為“標籤”，是用戶繪製的數字，其餘列包含關聯圖像的像素值。測試數據集（test.csv）與訓練集相同，只是它不包含“標籤”列。
+
+3.
+數據格式:非結構化
+    
+4.
+自己設計出一套類神經迴路的演算法，用訓練數據集訓練它後，再利用測試數據集測試它，看它能有多少的正確率。
+
+三.
+1.
+提升業績:如何在最少的時間接到越多的單子
+而我假設我選擇設置停靠的地方能有越多人經過，尤其是搭乘大眾運輸工具的人越多，那我接到單子的可能性就會越大
+
+2.
+大眾運輸站點(機場、高鐵站、火車站、捷運站、公車站)的人潮流量，而若我能藉由數據得知，哪些時間點的人潮為巔峰時刻，那我就可以在那個時間排多一點的車輛在那
+
+3.
+結構式
+
+4.
+看巔峰和非巔峰時刻的租借車輛差異
